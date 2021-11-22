@@ -25,8 +25,8 @@ public class MoodPandaTests extends BaseTest {
     public void sendHugToAnotherUserTest() {
         loginPage.openPage()
                 .login(EMAIL, PASSWORD)
-                .clickOnSendAHugButton(11);
-        Assert.assertEquals(feedPage.getTextAfterClickingOnSendAHug(11), "- You");
+                .clickOnSendAHugButton(4);
+        Assert.assertEquals(feedPage.getTextAfterClickingOnSendAHug(4), "\uD83D\uDC3CHugs - You");
     }
 
     @Test(description = "The test sends a reply message under a user's post")

@@ -15,7 +15,7 @@ public class FeedPage {
     public static final SelenideElement ACCOUNT_DROP_DOWN = $("#Settings");
     public static final String LIST_OF_ACCOUNT_MENU = "//*[@class='dropdown-menu']/ancestor::li[@id='Settings']//ul";
     public static final String SEND_A_HUG_BUTTON = "//*[contains(@class, 'm%d ')]//a[contains(@class, 'btnhugs')]";
-    public static final String TEXT_AFTER_CLICKING_ON_SEND_A_HUG = "//*[contains(@class, 'mcw%d ')]//*[contains(text(), 'You')]";
+    public static final String TEXT_AFTER_CLICKING_ON_SEND_A_HUG = "//*[contains(@class, 'mcw%d ')]//*[contains(@class, 'label-hug')]//a";
     public static final String REPLY_TEXTAREA = "#mcr%d";
     public static final String REPLY_BUTTON = "//*[contains(@class, 'mcw%d ')]//a[contains(text(), 'Reply')]";
     public static final String REPLY_TEXT = "//*[contains(@class,'mcw%d ')]//*[contains(@class, 'comment-tag')]//p";
