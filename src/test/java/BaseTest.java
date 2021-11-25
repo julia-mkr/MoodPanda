@@ -15,15 +15,19 @@ public class BaseTest {
     MoodPandaHomePage moodPandaHomePage;
 
     public static final String MOOD_PANDA_HOMEPAGE = "https://moodpanda.com/";
-    public static final String EMAIL = "jtest2011@mailinator.com";
-    public static final String PASSWORD = "52846937lol";
+    public static final String EMAIL = "";
+    public static final String PASSWORD = "";
 
     @BeforeMethod
-    public void inti() {
+    public void init() {
         Configuration.browser = "chrome";
         Configuration.timeout = 15000;
         Configuration.holdBrowserOpen = true;
         Configuration.headless = false;
+    }
+
+    @BeforeMethod
+    public void initPages() {
         loginPage = new LoginPage();
         feedPage = new FeedPage();
         moodUpdatedModalPage = new MoodUpdatedModalPage();
