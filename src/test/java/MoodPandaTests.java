@@ -8,7 +8,7 @@ public class MoodPandaTests extends BaseTest {
         loginPage.openPage()
                 .login(EMAIL, PASSWORD)
                 .selectOptionInAccountMenu("Avatar")
-                .changeAvatar(9);
+                .changeAvatar(4);
         Assert.assertEquals(avatarPage.getSuccessTextAfterChangingAvatar(), "Success!");
     }
 
