@@ -2,13 +2,14 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.PropertyReader;
 
 public class MoodPandaTests extends BaseTest {
 
     @Test(description = "The test changes an avatar image")
     public void changeUserAvatarTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .selectOptionInAccountMenu("Avatar")
                 .changeAvatar(4);
         Assert.assertEquals(avatarPage.getSuccessTextAfterChangingAvatar(), "Success!");
