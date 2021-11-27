@@ -17,8 +17,6 @@ public class BaseTest {
     MoodPandaHomePage moodPandaHomePage;
 
     public static final String MOOD_PANDA_HOMEPAGE = "https://moodpanda.com/";
-    public static final String EMAIL = "jtest2011@mailinator.com";
-    public static final String PASSWORD = "52846937lol";
 
     @BeforeMethod
     public void init() {

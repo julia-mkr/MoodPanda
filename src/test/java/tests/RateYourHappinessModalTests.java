@@ -2,13 +2,14 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.PropertyReader;
 
 public class RateYourHappinessModalTests extends BaseTest {
 
     @Test(description = "The test rates user's happiness level moving the slider")
     public void rateHappinessLevelTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .clickUpdateMoodButton()
                 .updateMood(8)
                 .clickOnUpdateMoodButton()
@@ -20,7 +21,7 @@ public class RateYourHappinessModalTests extends BaseTest {
             "textarea and chooses date: 'Now'")
     public void rateHappinessLevelFillTextareaAndChooseNowDateTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .clickUpdateMoodButton()
                 .updateMood(7)
                 .writeTextInWhatHappensTextarea("Everything is just fine")
@@ -36,7 +37,7 @@ public class RateYourHappinessModalTests extends BaseTest {
             " and selects hour and minutes")
     public void rateHappinessLevelChooseYesterdayDateTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .clickUpdateMoodButton()
                 .updateMood(8)
                 .chooseDateAndClickOnButton("Yesterday")
@@ -51,7 +52,7 @@ public class RateYourHappinessModalTests extends BaseTest {
             "textarea and chooses date: '2 days ago', and selects hour and minutes")
     public void rateHappinessLevelFillTextareaAndChooseTwoDaysAgoDateTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .clickUpdateMoodButton()
                 .updateMood(4)
                 .writeTextInWhatHappensTextarea("People are strange")
@@ -67,7 +68,7 @@ public class RateYourHappinessModalTests extends BaseTest {
     @Test(description = "The test rates user's happiness level moving the slider, and chooses date: '3 days ago'")
     public void rateHappinessLevelAndChooseThreeDaysAgoDateTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .clickUpdateMoodButton()
                 .updateMood(7)
                 .chooseDateAndClickOnButton("3 days ago")
@@ -82,7 +83,7 @@ public class RateYourHappinessModalTests extends BaseTest {
             "textarea and chooses date: 'Older', and then selects month, year, and day")
     public void rateHappinessLevelFillTextareaAndChooseOlderDateTest() {
         loginPage.openPage()
-                .login(EMAIL, PASSWORD)
+                .login(System.getProperty("email", PropertyReader.getProperty("email")), System.getProperty("password", PropertyReader.getProperty("password")))
                 .clickUpdateMoodButton()
                 .updateMood(10)
                 .writeTextInWhatHappensTextarea("Feeling awesome!")
