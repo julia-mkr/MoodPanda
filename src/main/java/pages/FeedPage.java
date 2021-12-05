@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
 @Log4j2
-public class FeedPage {
+public class FeedPage extends BasePage {
 
     public static final String UPDATE_MOOD_BUTTON = "#LinkUpdate";
     public static final SelenideElement ACCOUNT_DROP_DOWN = $("#Settings");

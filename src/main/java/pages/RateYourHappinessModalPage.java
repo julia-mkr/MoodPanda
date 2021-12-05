@@ -8,7 +8,7 @@ import org.openqa.selenium.Keys;
 import static com.codeborne.selenide.Selenide.$;
 
 @Log4j2
-public class RateYourHappinessModalPage {
+public class RateYourHappinessModalPage extends BasePage {
 
     public static final String SLIDER_CSS = ".ui-slider-handle";
     public static final String UPDATE_MOOD_BUTTON = ".btn-primary.ButtonUpdate";

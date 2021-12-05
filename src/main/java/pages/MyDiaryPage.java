@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class MyDiaryPage {
+public class MyDiaryPage extends BasePage {
 
     public static final String RATE_NUMBER = "//*[contains(@class, 'm1 ')]//h5//span[contains(@class,'badge')]";
     public static final String TEXT_FROM_WHATS_HAPPENS_TEXTAREA = "//*[contains(@class, 'm1 ')]//div[contains(@class, 'MoodPostItem')]";

@@ -4,7 +4,7 @@ import com.codeborne.selenide.WebDriverRunner;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class MoodPandaHomePage {
+public class MoodPandaHomePage extends BasePage {
 
     public static final String PANDA_IMAGE_ON_HOMEPAGE = ".intro-content>img";
 
